@@ -1,0 +1,15 @@
+package Segundo_Parcial;
+
+import java.util.Scanner;
+
+public class Persona {
+
+  
+    static Componentes componentes = new Componentes();
+    
+    public static void main(String[] args) {
+        componentes.Componentes_persona();
+        componentes.Mostrar_Componentes();
+    }
+    
+}

@@ -1,0 +1,223 @@
+package uspg.edu.parcialn2;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class Persona {
+  
+    protected String Nombre;
+    protected String Apellido;
+    protected String País;
+    protected String municipio;
+    protected String departamento;
+    protected String comunidad;
+    protected long DPI;
+    protected int [] telefono = new int [9];
+    protected static List<Persona> Componentes_personales = new ArrayList();
+    protected static List<Persona> Componentes_personales1 = new ArrayList();
+    protected static List<Persona> Componentes_personales2 = new ArrayList();
+    protected String [] Direccion = new String[7];
+
+    public void Componentes_persona(){
+        Persona componentes = new Persona();
+        componentes.setNombre("David");
+        componentes.setApellido("Orrego");
+        componentes.setPais("Guatemala");
+        componentes.setDepartamento("Izabal");
+        componentes.setMunicipio("Morlaes");
+        componentes.setComunidad("Ladino");
+        componentes.setDPI(2683638638);
+        
+        Componentes_personales.add(componentes);
+        
+        Persona componentes1 = new Persona();
+        componentes1.setNombre("Eleanor");
+        componentes1.setApellido("Menchu");
+        componentes1.setPais("Guatemala");
+        componentes1.setDepartamento("Guatemala");
+        componentes1.setMunicipio("Villanueva");
+        componentes1.setDPI(493290101);
+        componentes1.setComunidad("Ladino");
+        
+        Componentes_personales1.add(componentes1);
+        
+        Persona datos2 = new Persona();
+        componente2.setNombre("Diego");
+        componentes2.setApellido("Mendez");
+        componentes2.setPais("Guatemala");
+        componentes2.setDepartamento("Guatemala");
+        componentes2.setMunicipio("Capital");
+        componentes2.setDPI(202403211);
+        componentes2.setComunidad("Ladino");
+        
+        Componentes_personales2.add(componentes2);
+    }
+     public void mostrarComponentes(){
+        Direccion [0] = "1ra calle, lote 2, colonia milpas altas";
+        Direccion [1] = "3ra calle, lote 4, sector palmeras, colonia faroles 2";
+        telefono [0] = 84774847; 
+        telefono [1] = 78474748; 
+        telefono [2] = 63873783; 
+        System.out.println(this.Nombre +"\t"+ this.Apellido + "\t" + this.DPI + "\n\n"
+                + "\t" + this.departamento + "\t" + this.municipio + "\t" + this.Pais + "\t" + this.comunidad + "\n\n");
+        
+        for (int c=0; c <1;c++){
+            System.out.println("\t" + Direccion[c] + "\t\t" + Direccion [c+1]
+                + "\n\n\t" + telefono[c] + "\t" + telefono[c+1] + "\t" + telefono[c+2] + "\t" + "\n\n");
+        }
+    }
+     public void mostrarComponentes1(){
+        Direccion [0] = "Colonia Guajitos, lote 7 casa 54-3";
+        Direccion [1] = "Planes de barcenas, eje 6 casa 2";
+        telefono [0] = 24363533; 
+        telefono [1] = 65386373; 
+        telefono [2] = 25836387; 
+        System.out.println(this.Nombre +"\t"+ this.Apellido + "\t" + this.DPI + "\n\n"
+                + "\t" + this.departamento + "\t" + this.municipio + "\t" + this.Pais + "\t" + this.comunidad +  "\n\n");
+        
+        for (int c=0; c <1;c++){
+            System.out.println("\t" + Direccion[c] + "\t\t" + Direccion [c+1]
+                + "\n\n\t" + telefono[c] + "\t" + telefono[c+1] + "\t" + telefono[c+2] + "\t" + "\n\n");
+        }
+    }
+     public void mostrarComponentes2(){
+        Direccion [0] = "Kanajuyú 1 lote 4 casa 56-8";
+        Direccion [1] = "Zona 4 QUO apartamento 234";
+        telefono [0] = 63763764; 
+        telefono [1] = 87636733; 
+        telefono [2] = 88730820; 
+        System.out.println(this.Nombre +"\t"+ this.Apellido + "\t" + this.DPI + "\n\n"
+                + "\t" + this.departamento + "\t" + this.municipio + "\t" + this.Pais + "\t" + this.comunidad + "\n\n");
+        
+        for (int c=0; c <1;c++){
+            System.out.println("\t" + Direccion[c] + "\t\t" + Direccion [c+1]
+                + "\n\n\t" + telefono[c] + "\t" + telefono[c+1] + "\t" + telefono[c+2] + "\t" + "\n\n");
+        }
+    }
+    public void Mostrar_Componentes(){
+        Iterator <Persona> Iterador = Componentes_personales.iterator();
+        while (Iterador.hasNext()){
+            Iterador.next().mostrarComponentes();
+        }
+        Iterator <Persona> Iterador1 = Componentes_personales1.iterator();
+        while (Iterador1.hasNext()){
+            Iterador1.next().mostrarComponentes1();
+        }
+        Iterator <Persona> Iterador2 = Componentes_personales2.iterator();
+        while (Iterador2.hasNext()){
+            Iterador2.next().mostrarComponentes2();
+        }
+    }
+public Componentes(String Nombre, String Apellido, String Pais, String municipio, String departamento, String comunidad, long DPI) {
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.Pais = Pais;
+        this.municipio = municipio;
+        this.departamento = departamento;
+        this.comunidad = comunidad;
+        this.DPI = DPI;
+    }
+
+    
+    public Componentes() {
+    }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+
+    public String getApellido() {
+        return Apellido;
+    }
+
+    public void setApellido(String Apellido) {
+        this.Apellido = Apellido;
+    }
+
+    public String getPais() {
+        return Pais;
+    }
+
+    public void setPais(String Pais) {
+        this.Pais = Pais;
+    }
+
+    public String getMunicipio() {
+        return municipio;
+    }
+
+    public void setMunicipio(String municipio) {
+        this.municipio = municipio;
+    }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+
+    public String getComunidad() {
+        return comunidad;
+    }
+
+    public void setComunidad(String comunidad) {
+        this.comunidad = comunidad;
+    }
+
+    public long getDPI() {
+        return DPI;
+    }
+
+    public void setDPI(long DPI) {
+        this.DPI = DPI;
+    }
+
+    public List<Componentes> getComponentes_personales() {
+        return Componentes_personales;
+    }
+
+    public void setComponentes_personales(List<Componentes> Componentes_personales) {
+        this.Componentes_personales = Componentes_personales;
+    }
+
+    public int[] getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int[] telefono) {
+        this.telefono = telefono;
+    }
+
+    public static List<Componentes> getComponentes_personales1() {
+        return Componentes_personales1;
+    }
+
+    public static void setComponentes_personales1(List<Componentes> Componentes_personales1) {
+        Datos.Componentes_personales1 = Componentes_personales1;
+    }
+
+    public static List<Componentes> getComponentes_personales2() {
+        return Componentes_personales2;
+    }
+
+    public static void setComponentes_personales2(List<Componentes> Componentes_personales2) {
+        Componentes.Componentes_personales2 = Componentes_personales2;
+    }
+
+    public String[] getDireccion() {
+        return Direccion;
+    }
+
+    public void setDireccion(String[] Direccion) {
+        this.Direccion = Direccion;
+    }
+
+}
+    
